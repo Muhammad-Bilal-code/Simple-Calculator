@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .calculator {
+    display: grid;
+    width: 20%;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: 150px auto;
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+.screen {
+    grid-column: 1/5;
+    border: 1px solid #ccc;
+    min-height: 60px;
+}     
+.item {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px !important;
+}
+.item:hover {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.num {
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    font-size: 26px;
+    cursor: pointer;
+}
+.item13 {
+    grid-column: 1/3;
+}
+.item16 {
+    grid-column: 1/3;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="calculator">
+        <div class="screen" id="screen"></div>
+        <div class="item item1"><button class="num" id="one" onclick="getValue('1')">1</button></div>
+        <div class="item item2"><button class="num" id="two" onclick="getValue('2')">2</button></div>
+        <div class="item item3"><button class="num" id="three" onclick="getValue('3')">3</button></div>
+        <div class="item item4"><button class="num" id="plus" onclick="getValue('+')">+</button></div>
+        <div class="item item5"><button class="num" id="four" onclick="getValue('4')">4</button></div>
+        <div class="item item6"><button class="num" id="five" onclick="getValue('5')">5</button></div>
+        <div class="item item7"><button class="num" id="six" onclick="getValue('6')">6</button></div>
+        <div class="item item8"><button class="num" id="minus" onclick="getValue('-')">-</button></div>
+        <div class="item item9"><button class="num" id="seven" onclick="getValue('7')">7</button></div>
+        <div class="item item10"><button class="num" id="eight" onclick="getValue('8')">8</button></div>
+        <div class="item item11"><button class="num" id="nine" onclick="getValue('9')">9</button></div>
+        <div class="item item12"><button class="num" id="multiply" onclick="getValue('*')">*</button></div>
+        <div class="item item13"><button class="num" id="zero" onclick="getValue('0')">0</button></div>
+        <div class="item item14"><button class="num" id="point" onclick="getValue('.')">.</button></div>
+        <div class="item item15"><button class="num" id="divide" onclick="getValue('/')">/</button></div>
+        <div class="item item16"><button class="num" id="clear-all" onclick="getValue('clear all')">Clear All</button></div>
+        <div class="item item17"><button class="num" id="back" onclick="getValue('back')">Back</button></div>
+        <div class="item item18"><button class="num" id="equal" onclick="getValue('=')">=</button></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
